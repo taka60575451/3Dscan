@@ -1,0 +1,65 @@
+{
+  "name": "LiDAR 3Dスキャナー",
+  "short_name": "3Dスキャン",
+  "description": "iPhone/iPadのLiDARセンサーを活用した高精度3D点群データスキャンツール",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#4285F4",
+  "scope": "/",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "src/assets/images/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "src/assets/images/app-icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "src/assets/images/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "src/assets/images/screenshot-1.jpg",
+      "sizes": "1242x2688",
+      "type": "image/jpeg",
+      "platform": "narrow",
+      "label": "3Dスキャン中の画面"
+    },
+    {
+      "src": "src/assets/images/screenshot-2.jpg",
+      "sizes": "1242x2688", 
+      "type": "image/jpeg",
+      "platform": "narrow",
+      "label": "スキャン結果の点群表示"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "lang": "ja-JP",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "shortcuts": [
+    {
+      "name": "新規スキャン",
+      "short_name": "スキャン",
+      "description": "新しいスキャンを開始",
+      "url": "/index.html?action=scan",
+      "icons": [{ "src": "src/assets/images/scan-icon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "プロジェクト一覧",
+      "short_name": "プロジェクト",
+      "description": "保存されたスキャンデータを表示",
+      "url": "/index.html?action=projects",
+      "icons": [{ "src": "src/assets/images/projects-icon.png", "sizes": "96x96" }]
+    }
+  ]
+}

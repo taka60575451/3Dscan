@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
+  <!-- スキャン関連アイコン -->
+  <symbol id="icon-scan" viewBox="0 0 24 24" aria-labelledby="scan-icon">
+    <title id="scan-icon">スキャン</title>
+    <path d="M4 6H2V2h4v2H4v2zm0 12H2v4h4v-2H4v-2zm16-12h-2V2h4v2h-2v2zm0 12h-2v2h4v-4h-2v2zM8 4h8v2H8V4zm-4 4h2v8H4V8zm16 0h2v8h-2V8zm-4 12H8v-2h8v2z" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-scan-area" viewBox="0 0 24 24" aria-labelledby="scan-area-icon">
+    <title id="scan-area-icon">エリアスキャン</title>
+    <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" fill="none" stroke-width="2"/>
+    <path d="M9 9h6v6H9z" stroke="currentColor" fill="none" stroke-width="2"/>
+    <path d="M3 12h3M18 12h3M12 3v3M12 18v3" stroke="currentColor" stroke-width="2"/>
+  </symbol>
+
+  <symbol id="icon-scan-detail" viewBox="0 0 24 24" aria-labelledby="scan-detail-icon">
+    <title id="scan-detail-icon">詳細スキャン</title>
+    <circle cx="12" cy="12" r="8" stroke="currentColor" fill="none" stroke-width="2"/>
+    <path d="M12 4V2M12 22v-2M4 12H2m20 0h-2m-14 6l-1.5 1.5M17.5 6.5L19 5M6.5 6.5L5 5m13.5 13.5L19 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="12" cy="12" r="3" stroke="currentColor" fill="none" stroke-width="2"/>
+  </symbol>
+
+  <!-- 制御アイコン -->
+  <symbol id="icon-play" viewBox="0 0 24 24" aria-labelledby="play-icon">
+    <title id="play-icon">開始</title>
+    <path d="M8 5v14l11-7z" stroke="currentColor" fill="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-pause" viewBox="0 0 24 24" aria-labelledby="pause-icon">
+    <title id="pause-icon">一時停止</title>
+    <path d="M6 4h4v16H6zm8 0h4v16h-4z" stroke="currentColor" fill="currentColor" stroke-width="2"/>
+  </symbol>
+
+  <symbol id="icon-stop" viewBox="0 0 24 24" aria-labelledby="stop-icon">
+    <title id="stop-icon">停止</title>
+    <rect x="6" y="6" width="12" height="12" stroke="currentColor" fill="currentColor" stroke-width="2"/>
+  </symbol>
+
+  <symbol id="icon-reset" viewBox="0 0 24 24" aria-labelledby="reset-icon">
+    <title id="reset-icon">リセット</title>
+    <path d="M3 12a9 9 0 1 1 9 9 9 9 0 0 1-9-9z" stroke="currentColor" fill="none" stroke-width="2"/>
+    <path d="M3 12h3m6-9v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- ナビゲーションアイコン -->
+  <symbol id="icon-back" viewBox="0 0 24 24" aria-labelledby="back-icon">
+    <title id="back-icon">戻る</title>
+    <path d="M20 12H4m10-8L4 12l10 8" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-forward" viewBox="0 0 24 24" aria-labelledby="forward-icon">
+    <title id="forward-icon">進む</title>
+    <path d="M4 12h16M10 4l10 8-10 8" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-home" viewBox="0 0 24 24" aria-labelledby="home-icon">
+    <title id="home-icon">ホーム</title>
+    <path d="M3 10.182V22h18V10.182L12 2z" stroke="currentColor" fill="none" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M9 16h6v6H9z" stroke="currentColor" fill="none" stroke-width="2"/>
+  </symbol>
+
+  <symbol id="icon-menu" viewBox="0 0 24 24" aria-labelledby="menu-icon">
+    <title id="menu-icon">メニュー</title>
+    <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- ツールアイコン -->
+  <symbol id="icon-measure" viewBox="0 0 24 24" aria-labelledby="measure-icon">
+    <title id="measure-icon">測定</title>
+    <path d="M2 20h20M4 4v16M20 4v16" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+    <path d="M4 8h4M4 12h6M4 16h4M16 8h4M14 12h6M16 16h4" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="icon-export" viewBox="0 0 24 24" aria-labelledby="export-icon">
+    <title id="export-icon">エクスポート</title>
+    <path d="M12 3v12m-4-4l4 4 4-4" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M20 16v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="icon-settings" viewBox="0 0 24 24" aria-labelledby="settings-icon">
+    <title id="settings-icon">設定</title>
+    <circle cx="12" cy="12" r="3" stroke="currentColor" fill="none" stroke-width="2"/>
+    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="currentColor" fill="none" stroke-width="2"/>
+  </symbol>
+
+  <symbol id="icon-filter" viewBox="0 0 24 24" aria-labelledby="filter-icon">
+    <title id="filter-icon">フィルター</title>
+    <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z" stroke="currentColor" fill="none" stroke-width="2" stroke-linejoin="round"/>
+  </symbol>
+
+  <!-- ステータスアイコン -->
+  <symbol id="icon-success" viewBox="0 0 24 24" aria-labelledby="success-icon">
+    <title id="success-icon">成功</title>
+    <circle cx="12" cy="12" r="10" stroke="currentColor" fill="none" stroke-width="2"/>
+    <path d="M8 12l3 3 6-6" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-error" viewBox="0 0 24 24" aria-labelledby="error-icon">
+    <title id="error-icon">エラー</title>
+    <circle cx="12" cy="12" r="10" stroke="currentColor" fill="none" stroke-width="2"/>
+    <path d="M15 9l-6 6M9 9l6 6" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="icon-warning" viewBox="0 0 24 24" aria-labelledby="warning-icon">
+    <title id="warning-icon">警告</title>
+    <path d="M12 2L1 21h22L12 2z" stroke="currentColor" fill="none" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M12 8v6m0 4v.01" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="icon-loading" viewBox="0 0 24 24" aria-labelledby="loading-icon">
+    <title id="loading-icon">読み込み中</title>
+    <circle cx="12" cy="12" r="10" stroke="currentColor" fill="none" stroke-width="2" stroke-dasharray="50 50" stroke-dashoffset="0">
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M12 6v1m0 10v1m-7-7h1m13 0h1M7.05 7.05l.7.7m8.5 8.5l.7.7M7.05 16.95l.7-.7m8.5-8.5l.7-.7" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- LiDAR特有アイコン -->
+  <symbol id="icon-point-cloud" viewBox="0 0 24 24" aria-labelledby="point-cloud-icon">
+    <title id="point-cloud-icon">点群</title>
+    <circle cx="6" cy="6" r="1.5" fill="currentColor"/>
+    <circle cx="10" cy="4" r="1.5" fill="currentColor"/>
+    <circle cx="15" cy="5" r="1.5" fill="currentColor"/>
+    <circle cx="18" cy="8" r="1.5" fill="currentColor"/>
+    <circle cx="20" cy="13" r="1.5" fill="currentColor"/>
+    <circle cx="8" cy="9" r="1.5" fill="currentColor"/>
+    <circle cx="11" cy="12" r="1.5" fill="currentColor"/>
+    <circle cx="7" cy="15" r="1.5" fill="currentColor"/>
+    <circle cx="13" cy="8" r="1.5" fill="currentColor"/>
+    <circle cx="17" cy="16" r="1.5" fill="currentColor"/>
+    <circle cx="12" cy="17" r="1.5" fill="currentColor"/>
+    <circle cx="5" cy="19" r="1.5" fill="currentColor"/>
+    <circle cx="14" cy="13" r="1.5" fill="currentColor"/>
+    <circle cx="19" cy="4" r="1.5" fill="currentColor"/>
+    <circle cx="3" cy="11" r="1.5" fill="currentColor"/>
+  </symbol>
+
+  <symbol id="icon-rotate-view" viewBox="0 0 24 24" aria-labelledby="rotate-view-icon">
+    <title id="rotate-view-icon">ビュー回転</title>
+    <circle cx="12" cy="12" r="8" stroke="currentColor" fill="none" stroke-width="2"/>
+    <path d="M12 4C9 4 4 5 4 12M20 12C20 19 15 20 12 20" stroke="currentColor" fill="none" stroke-width="2"/>
+    <path d="M4 12l2-2M4 12l2 2M20 12l-2-2M20 12l-2 2" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-zoom" viewBox="0 0 24 24" aria-labelledby="zoom-icon">
+    <title id="zoom-icon">ズーム</title>
+    <circle cx="11" cy="11" r="7" stroke="currentColor" fill="none" stroke-width="2"/>
+    <path d="M11 8v6m-3-3h6m3 3l4 4" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="icon-file-ply" viewBox="0 0 24 24" aria-labelledby="file-ply-icon">
+    <title id="file-ply-icon">PLYファイル</title>
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" stroke="currentColor" fill="none" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M14 2v6h6M7 13h2.5v5H7zm5-5h2v10h-2zm5 3h2.5v5H17z" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-file-e57" viewBox="0 0 24 24" aria-labelledby="file-e57-icon">
+    <title id="file-e57-icon">E57ファイル</title>
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" stroke="currentColor" fill="none" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M14 2v6h6M7 13h4M7 17h4M7 10h4m1 3h2.5v5H12zm5-5h2v10h-2z" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-quality" viewBox="0 0 24 24" aria-labelledby="quality-icon">
+    <title id="quality-icon">品質</title>
+    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" fill="none" stroke-width="2" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-info" viewBox="0 0 24 24" aria-labelledby="info-icon">
+    <title id="info-icon">情報</title>
+    <circle cx="12" cy="12" r="10" stroke="currentColor" fill="none" stroke-width="2"/>
+    <path d="M12 8v.01M12 11v5" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="icon-device" viewBox="0 0 24 24" aria-labelledby="device-icon">
+    <title id="device-icon">デバイス</title>
+    <rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" fill="none" stroke-width="2"/>
+    <path d="M12 18h.01" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+    <path d="M8 5h8" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="icon-help" viewBox="0 0 24 24" aria-labelledby="help-icon">
+    <title id="help-icon">ヘルプ</title>
+    <circle cx="12" cy="12" r="10" stroke="currentColor" fill="none" stroke-width="2"/>
+    <path d="M9 9a3 3 0 0 1 6 0c0 2-3 3-3 3m0 4v.01" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+</svg>

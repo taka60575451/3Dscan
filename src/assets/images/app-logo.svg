@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    :root {
+      --logo-color: currentColor;
+    }
+    .logo-point {
+      fill: var(--logo-color);
+      transition: all 0.3s ease;
+    }
+    .logo-line {
+      stroke: var(--logo-color);
+      stroke-width: 3;
+      stroke-linecap: round;
+      fill: none;
+      transition: all 0.3s ease;
+    }
+    .logo-scan {
+      stroke: var(--logo-color);
+      stroke-width: 2;
+      stroke-dasharray: 12, 8;
+      fill: none;
+      opacity: 0.8;
+      transition: all 0.3s ease;
+    }
+    .logo-cube {
+      fill: var(--logo-color);
+      opacity: 0.15;
+      stroke: var(--logo-color);
+      stroke-width: 2;
+      transition: all 0.3s ease;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .logo-point, .logo-line, .logo-scan, .logo-cube {
+        transition: none;
+      }
+    }
+  </style>
+  
+  <!-- 3D空間を表す立方体フレーム -->
+  <path class="logo-cube" d="M60,180 L60,60 L180,60 L180,180 Z" />
+  <path class="logo-line" d="M60,60 L120,30 L180,60" />
+  <path class="logo-line" d="M180,180 L120,210 L60,180" />
+  <path class="logo-line" d="M120,30 L120,210" />
+  
+  <!-- スキャン平面を表す円 -->
+  <ellipse class="logo-scan" cx="120" cy="120" rx="70" ry="40" transform="rotate(-15 120 120)" />
+  <ellipse class="logo-scan" cx="120" cy="120" rx="50" ry="30" transform="rotate(15 120 120)" />
+  
+  <!-- 点群を表す点 -->
+  <circle class="logo-point" cx="90" cy="100" r="5" />
+  <circle class="logo-point" cx="110" cy="85" r="4" />
+  <circle class="logo-point" cx="140" cy="90" r="6" />
+  <circle class="logo-point" cx="155" cy="115" r="4" />
+  <circle class="logo-point" cx="130" cy="140" r="7" />
+  <circle class="logo-point" cx="95" cy="135" r="5" />
+  <circle class="logo-point" cx="75" cy="110" r="4" />
+  <circle class="logo-point" cx="120" cy="120" r="8" />
+  <circle class="logo-point" cx="105" cy="160" r="3" />
+  <circle class="logo-point" cx="145" cy="155" r="4" />
+  <circle class="logo-point" cx="165" cy="130" r="3" />
+  <circle class="logo-point" cx="85" cy="75" r="3" />
+  <circle class="logo-point" cx="135" cy="65" r="4" />
+  <circle class="logo-point" cx="115" cy="105" r="6" />
+  <circle class="logo-point" cx="150" cy="70" r="3" />
+  
+  <!-- スキャンビームを表す線 -->
+  <path class="logo-line" d="M120,50 Q150,120 120,190" opacity="0.6" />
+  <path class="logo-line" d="M80,70 Q120,120 80,170" opacity="0.5" />
+  <path class="logo-line" d="M160,70 Q120,120 160,170" opacity="0.5" />
+</svg>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Documentation - LiDAR 3D Scanner</title>
+    <meta name="description" content="Help documentation and user guide for LiDAR 3D Scanner application">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../assets/images/app-logo.svg" type="image/svg+xml">
+</head>
+<body class="help-page">
+    <header class="help-header">
+        <div class="container">
+            <button class="back-button" aria-label="Go back to application">
+                <svg><use xlink:href="../assets/images/icons.svg#arrow-left"></use></svg>
+                <span>Back to App</span>
+            </button>
+            <h1>LiDAR 3D Scanner Help</h1>
+        </div>
+    </header>
+
+    <main class="help-content container">
+        <aside class="help-nav">
+            <div class="sticky-nav">
+                <h2>Contents</h2>
+                <nav aria-label="Help documentation navigation">
+                    <ul>
+                        <li><a href="#getting-started">Getting Started</a></li>
+                        <li><a href="#scanning-tips">Scanning Tips</a></li>
+                        <li><a href="#export-options">Export Options</a></li>
+                        <li><a href="#compatible-devices">Compatible Devices</a></li>
+                        <li><a href="#troubleshooting">Troubleshooting</a></li>
+                        <li><a href="#faq">Frequently Asked Questions</a></li>
+                    </ul>
+                </nav>
+                <button class="print-button" aria-label="Print documentation">
+                    <svg><use xlink:href="../assets/images/icons.svg#print"></use></svg>
+                    <span>Print this guide</span>
+                </button>
+            </div>
+        </aside>
+
+        <div class="help-sections">
+            <section id="getting-started" class="help-section">
+                <div class="section-header">
+                    <h2>Getting Started</h2>
+                    <button class="toggle-section" aria-expanded="true" aria-controls="getting-started-content">
+                        <svg><use xlink:href="../assets/images/icons.svg#chevron-down"></use></svg>
+                    </button>
+                </div>
+                <div id="getting-started-content" class="section-content">
+                    <h3>Welcome to LiDAR 3D Scanner</h3>
+                    <p>This application allows you to create high-precision 3D scans of your environment using the LiDAR sensor on your compatible iPhone or iPad.</p>
+                    
+                    <div class="tutorial-steps">
+                        <div class="step">
+                            <div class="step-image">
+                                <img src="../assets/images/help/device-check.jpg" alt="Device compatibility check screen" width="280">
+                            </div>
+                            <div class="step-content">
+                                <h4>Step 1: Device Compatibility</h4>
+                                <p>When you first launch the app, it will check if your device has a compatible LiDAR sensor. You need an iPhone 12 Pro or newer, or an iPad Pro 2020 or newer.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-image">
+                                <img src="../assets/images/help/scan-setup.jpg" alt="Scan setup screen" width="280">
+                            </div>
+                            <div class="step-content">
+                                <h4>Step 2: Set Up Your Scan</h4>
+                                <p>Choose between "Max Area" mode for scanning larger spaces, or "Max Detail" for capturing fine details in smaller areas. Adjust other settings as needed.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-image">
+                                <img src="../assets/images/help/scanning.jpg" alt="Active scanning screen" width="280">
+                            </div>
+                            <div class="step-content">
+                                <h4>Step 3: Perform the Scan</h4>
+                                <p>Point your device at the area you want to scan and move slowly around the space. The app will display a real-time preview of the 3D point cloud as you scan.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-image">
+                                <img src="../assets/images/help/export.jpg" alt="Export options screen" width="280">
+                            </div>
+                            <div class="step-content">
+                                <h4>Step 4: Export Your Results</h4>
+                                <p>When finished, stop the scan and review the 3D model. You can export the scan as a PLY or E57 file for use in other 3D applications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="scanning-tips" class="help-section">
+                <div class="section-header">
+                    <h2>Scanning Tips</h2>
+                    <button class="toggle-section" aria-expanded="false" aria-controls="scanning-tips-content">
+                        <svg><use xlink:href="../assets/images/icons.svg#chevron-down"></use></svg>
+                    </button>
+                </div>
+                <div id="scanning-tips-content" class="section-content hidden">
+                    <h3>How to Get the Best Results</h3>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <svg><use xlink:href="../assets/images/icons.svg#lightbulb"></use></svg>
+                        </div>
+                        <div class="tip-content">
+                            <h4>Proper Lighting</h4>
+                            <p>Ensure the area is well-lit but avoid direct sunlight or highly reflective surfaces which can confuse the LiDAR sensor.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <svg><use xlink:href="../assets/images/icons.svg#move-slow"></use></svg>
+                        </div>
+                        <div class="tip-content">
+                            <h4>Move Slowly</h4>
+                            <p>Move your device slowly and steadily. Rapid movements can result in missed areas or misaligned point clouds.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <svg><use xlink:href="../assets/images/icons.svg#overlap"></use></svg>
+                        </div>
+                        <div class="tip-content">
+                            <h4>Ensure Overlap</h4>
+                            <p>Make sure your scanning path overlaps previous areas to help the system match and align the points correctly.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <svg><use xlink:href="../assets/images/icons.svg#distance"></use></svg>
+                        </div>
+                        <div class="tip-content">
+                            <h4>Optimal Distance</h4>
+                            <p>The LiDAR sensor works best at distances between 0.5m to 5m from objects. Stay within this range for the most detailed scans.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <svg><use xlink:href="../assets/images/icons.svg#battery"></use></svg>
+                        </div>
+                        <div class="tip-content">
+                            <h4>Battery and Heat</h4>
+                            <p>Scanning uses significant processing power. Make sure your device is charged and avoid scanning if your device is overheating.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="export-options" class="help-section">
+                <div class="section-header">
+                    <h2>Export Options</h2>
+                    <button class="toggle-section" aria-expanded="false" aria-controls="export-options-content">
+                        <svg><use xlink:href="../assets/images/icons.svg#chevron-down"></use></svg>
+                    </button>
+                </div>
+                <div id="export-options-content" class="section-content hidden">
+                    <h3>Understanding File Formats</h3>
+                    
+                    <div class="format-comparison">
+                        <div class="format-card">
+                            <h4>PLY Format</h4>
+                            <p class="format-description">The Polygon File Format (PLY) is widely supported by 3D software and maintains point color data.</p>
+                            <h5>Best for:</h5>
+                            <ul>
+                                <li>General purpose 3D visualization</li>
+                                <li>Importing into most 3D software</li>
+                                <li>Preserving color information</li>
+                            </ul>
+                            <h5>Compatible Software:</h5>
+                            <p>Blender, MeshLab, CloudCompare, Autodesk software, Unity</p>
+                        </div>
+                        
+                        <div class="format-card">
+                            <h4>E57 Format</h4>
+                            <p class="format-description">An industry standard for 3D point cloud data exchange, preferred for engineering and architecture.</p>
+                            <h5>Best for:</h5>
+                            <ul>
+                                <li>Professional engineering work</li>
+                                <li>Architecture and construction</li>
+                                <li>High-precision measurements</li>
+                            </ul>
+                            <h5>Compatible Software:</h5>
+                            <p>Autodesk ReCap, Leica Cyclone, FARO SCENE, CloudCompare</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Export Settings</h3>
+                    <p>When exporting your scan, you can adjust several settings:</p>
+                    
+                    <div class="settings-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Setting</th>
+                                    <th>Description</th>
+                                    <th>Recommended Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Point Density</td>
+                                    <td>Controls how many points are included in the export</td>
+                                    <td>100% for max detail, 50-75% for larger scans</td>
+                                </tr>
+                                <tr>
+                                    <td>Color Information</td>
+                                    <td>Include color data for each point</td>
+                                    <td>Enabled (unless file size is critical)</td>
+                                </tr>
+                                <tr>
+                                    <td>Noise Filtering</td>
+                                    <td>Removes outlier points and noise</td>
+                                    <td>Medium (adjustable based on scan quality)</td>
+                                </tr>
+                                <tr>
+                                    <td>Coordinate System</td>
+                                    <td>Reference frame for the point cloud</td>
+                                    <td>Device-relative (default)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="compatible-devices" class="help-section">
+                <div class="section-header">
+                    <h2>Compatible Devices</h2>
+                    <button class="toggle-section" aria-expanded="false" aria-controls="compatible-devices-content">
+                        <svg><use xlink:href="../assets/images/icons.svg#chevron-down"></use></svg>
+                    </button>
+                </div>
+                <div id="compatible-devices-content" class="section-content hidden">
+                    <h3>Supported Hardware</h3>
+                    <p>This application requires a device with a LiDAR sensor. Currently, only select Apple devices include this hardware:</p>
+                    
+                    <div class="device-lists">
+                        <div class="device-category">
+                            <h4>iPhone Models</h4>
+                            <ul>
+                                <li>iPhone 12 Pro</li>
+                                <li>iPhone 12 Pro Max</li>
+                                <li>iPhone 13 Pro</li>
+                                <li>iPhone 13 Pro Max</li>
+                                <li>iPhone 14 Pro</li>
+                                <li>iPhone 14 Pro Max</li>
+                                <li>iPhone 15 Pro</li>
+                                <li>iPhone 15 Pro Max</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="device-category">
+                            <h4>iPad Models</h4>
+                            <ul>
+                                <li>iPad Pro 11-inch (2nd gen or later)</li>
+                                <li>iPad Pro 12.9-inch (4th gen or later)</li>
+                                <li>iPad Air (5th gen or later)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3>Browser Requirements</h3>
+                    <p>For optimal performance, use one of these browsers:</p>
+                    <ul>
+                        <li>Safari (recommended for best performance)</li>
+                        <li>Chrome for iOS (version 94 or later)</li>
+                    </ul>
+                    
+                    <div class="performance-note">
+                        <h4>Performance Considerations</h4>
+                        <p>Newer devices will generally provide better scanning performance and can handle larger scan areas. The theoretical maximum scan area is 465 square meters, but practical limits may be lower depending on your device's available memory and processing power.</p>
+                        <table class="performance-table">
+                            <thead>
+                                <tr>
+                                    <th>Device Generation</th>
+                                    <th>Maximum Recommended Area</th>
+                                    <th>Point Density</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>iPhone 12 Pro / iPad Pro 2020</td>
+                                    <td>~100 sq meters</td>
+                                    <td>Medium</td>
+                                </tr>
+                                <tr>
+                                    <td>iPhone 13 Pro / iPad Pro 2021</td>
+                                    <td>~200 sq meters</td>
+                                    <td>High</td>
+                                </tr>
+                                <tr>
+                                    <td>iPhone 14 Pro and newer</td>
+                                    <td>~465 sq meters</td>
+                                    <td>Very High</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="troubleshooting" class="help-section">
+                <div class="section-header">
+                    <h2>Troubleshooting</h2>
+                    <button class="toggle-section" aria-expanded="false" aria-controls="troubleshooting-content">
+                        <svg><use xlink:href="../assets/images/icons.svg#chevron-down"></use></svg>
+                    </button>
+                </div>
+                <div id="troubleshooting-content" class="section-content hidden">
+                    <h3>Common Issues and Solutions</h3>
+                    
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span>Device compatibility error even though I have a supported model</span>
+                                <svg><use xlink:href="../assets/images/icons.svg#plus"></use></svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p>This can happen for several reasons:</p>
+                                <ul>
+                                    <li>Your browser may not have permission to access the device's sensors. Go to your browser settings and ensure camera and sensor permissions are granted for this site.</li>
+                                    <li>If using Safari, ensure "WebXR" and "AR" capabilities are enabled in the Experimental Features section of Safari settings.</li>
+                                    <li>Try restarting your device to clear any sensor access issues.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span>App crashes during scanning</span>
+                                <svg><use xlink:href="../assets/images/icons.svg#plus"></use></svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Scanning consumes significant memory and processing power. To prevent crashes:</p>
+                                <ul>
+                                    <li>Close other apps running in the background</li>
+                                    <li>Ensure your device isn't overheating</li>
+                                    <li>For large spaces, use the "Max Area" mode instead of "Max Detail"</li>
+                                    <li>Try scanning in smaller sections if you're attempting a very large area</li>
+                                    <li>If you have an older supported device, reduce the scanning quality settings</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span>Poor quality scan results</span>
+                                <svg><use xlink:href="../assets/images/icons.svg#plus"></use></svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p>To improve scan quality:</p>
+                                <ul>
+                                    <li>Ensure adequate, even lighting without bright spots or deep shadows</li>
+                                    <li>Move slowly and steadily during scanning</li>
+                                    <li>Maintain the optimal distance (0.5m-5m) from objects</li>
+                                    <li>Avoid highly reflective, transparent, or very dark surfaces</li>
+                                    <li>Use "Max Detail" mode for smaller objects or spaces</li>
+                                    <li>Clean your device's LiDAR sensor if it appears dirty</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span>Export fails or creates corrupted files</span>
+                                <svg><use xlink:href="../assets/images/icons.svg#plus"></use></svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Export issues can be resolved by:</p>
+                                <ul>
+                                    <li>Ensuring you have sufficient device storage space</li>
+                                    <li>Reducing the point density if exporting very large scans</li>
+                                    <li>Disabling background apps to free memory</li>
+                                    <li>If using Safari, check that downloads aren't being blocked</li>
+                                    <li>Try exporting in PLY format first, which is generally more reliable</li>
+                                    <li>For very large scans, try the "Optimized" export option</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <button class="accordion-header" aria-expanded="false">
+                                <span>App doesn't recognize LiDAR sensor</span>
+                                <svg><use xlink:href="../assets/images/icons.svg#plus"></use></svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p>If the app doesn't detect your LiDAR sensor:</p>
+                                <ul>
+                                    <li>Verify your device model actually has LiDAR (only Pro models of iPhones have this sensor)</li>
+                                    <li>Restart your device completely</li>
+                                    <li>Update to the latest iOS/iPadOS version</li>
+                                    <li>Check if other AR apps can access the LiDAR sensor</li>
+                                    <li>Try accessing the site in regular Safari instead of in-app browsers</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="faq" class="help-section">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <button class="toggle-section" aria-expanded="false" aria-controls="faq-content">
+                        <svg><use xlink:href="../assets/images/icons.svg#chevron-down"></use></svg>
+                    </button>
+                </div>
+                <div id="faq-content" class="section-content hidden">
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <h3>What is the accuracy of the LiDAR scans?</h3>
+                            <p>The LiDAR scanner in supported Apple devices offers millimeter-level accuracy. In optimal conditions, you can expect accuracy within 1-5mm for nearby objects (within 1m) and 1-2cm for objects farther away (up to 5m).</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>Can I use the exported models in other software?</h3>
+                            <p>Yes! The exported PLY and E57 files are standard formats supported by many 3D applications. Popular software that can import these files includes Blender, MeshLab, CloudCompare, Autodesk ReCap, Revit, and many others.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>How large can the scan area be?</h3>
+                            <p>The theoretical maximum is about 465 square meters, but practical limits depend on your device model, available memory, and scanning mode. Newer devices with more RAM can handle larger areas. For very large spaces, consider scanning in sections.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>What's the difference between "Max Area" and "Max Detail" modes?</h3>
+                            <p>"Max Area" optimizes for covering larger spaces by reducing point density and processing. "Max Detail" captures the highest possible resolution and detail but is more resource-intensive and best for smaller areas or objects.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>Can I scan outdoors?</h3>
+                            <p>Yes, but with limitations. LiDAR works best in controlled lighting conditions. Direct sunlight can interfere with the sensor, and very bright outdoor conditions may reduce accuracy. Dawn, dusk, or overcast days provide better outdoor scanning conditions.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>How do I get the scan into CAD software?</h3>
+                            <p>Export your scan in E57 format, which is designed for engineering applications. Most professional CAD software can import E57 files. For software without direct E57 support, use a conversion tool like CloudCompare to convert to a compatible format.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>Is there a limit to the file size I can export?</h3>
+                            <p>The export size is primarily limited by your device's available memory. For very dense scans, the app offers options to reduce point density during export. If you encounter memory issues, try reducing the export quality or dividing your scanning into smaller sections.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>Does the app work without internet connection?</h3>
+                            <p>Yes, once loaded, the app functions completely offline. All scanning and processing happens on your device. An internet connection is only needed for the initial app loading.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="help-footer">
+        <div class="container">
+            <div class="support-info">
+                <h2>Need More Help?</h2>
+                <p>If you couldn't find the answer to your question, please contact our support team:</p>
+                <a href="mailto:support@lidar3dscanner.com" class="support-email">support@lidar3dscanner.com</a>
+            </div>
+            <div class="app-info">
+                <img src="../assets/images/app-logo.svg" alt="LiDAR 3D Scanner Logo" width="40" height="40">
+                <p>LiDAR 3D Scanner<br>Version 1.0.0</p>
+                <p class="copyright">&copy; 2024 LiDAR 3D Scanner Team. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/help.js"></script>
+</body>
+</html>

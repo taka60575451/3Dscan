@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="High-precision 3D point cloud scanning application using iPhone/iPad LiDAR sensors">
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <title>LiDAR 3D Scanner</title>
+    
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="manifest" href="assets/manifest.json">
+    <link rel="icon" type="image/svg+xml" href="assets/images/app-logo.svg">
+    <link rel="apple-touch-icon" href="assets/images/app-logo-192.png">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-container">
+                <svg class="app-logo" aria-hidden="true">
+                    <use xlink:href="assets/images/app-logo.svg#logo"></use>
+                </svg>
+                <h1>LiDAR 3D Scanner</h1>
+            </div>
+            <div class="header-controls">
+                <button class="icon-button" id="settingsButton" aria-label="Settings">
+                    <svg aria-hidden="true">
+                        <use xlink:href="assets/images/icons.svg#settings"></use>
+                    </svg>
+                </button>
+                <button class="icon-button" id="helpButton" aria-label="Help">
+                    <svg aria-hidden="true">
+                        <use xlink:href="assets/images/icons.svg#help"></use>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="app-content">
+            <!-- Device Detection View -->
+            <section class="view active" id="detectionView" data-view="detection">
+                <div class="detection-container">
+                    <div class="device-status">
+                        <svg class="status-icon" aria-hidden="true">
+                            <use xlink:href="assets/images/icons.svg#device-check"></use>
+                        </svg>
+                        <h2>Device Compatibility Check</h2>
+                        <p id="detectionMessage">Checking your device compatibility...</p>
+                    </div>
+                    <div class="compatibility-info">
+                        <h3>Compatible Devices</h3>
+                        <ul>
+                            <li>iPhone 12 Pro and later models</li>
+                            <li>iPad Pro 2020 and later models</li>
+                            <li>Must use Safari browser on iOS</li>
+                        </ul>
+                    </div>
+                    <button id="startScanButton" class="primary-button" disabled>Start Scanning</button>
+                </div>
+            </section>
+
+            <!-- Scanning View -->
+            <section class="view" id="scanView" data-view="scan">
+                <div class="scan-container">
+                    <div class="scan-preview" id="scanPreview">
+                        <!-- 3D preview will be rendered here by Three.js -->
+                    </div>
+                    
+                    <div class="scan-overlay">
+                        <div class="scan-info">
+                            <div class="scan-metric">
+                                <span class="metric-label">Points</span>
+                                <span class="metric-value" id="pointCount">0</span>
+                            </div>
+                            <div class="scan-metric">
+                                <span class="metric-label">Area</span>
+                                <span class="metric-value" id="scanArea">0 m²</span>
+                            </div>
+                            <div class="scan-status" id="scanStatus">Ready</div>
+                        </div>
+                        
+                        <div class="scan-controls">
+                            <div class="mode-selector" role="radiogroup" aria-label="Scan Mode">
+                                <button class="mode-button active" id="maxAreaMode" role="radio" aria-checked="true">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="assets/images/icons.svg#max-area"></use>
+                                    </svg>
+                                    <span>Max Area</span>
+                                </button>
+                                <button class="mode-button" id="maxDetailMode" role="radio" aria-checked="false">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="assets/images/icons.svg#max-detail"></use>
+                                    </svg>
+                                    <span>Max Detail</span>
+                                </button>
+                            </div>
+                            
+                            <button id="captureButton" class="capture-button">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="assets/images/icons.svg#capture"></use>
+                                </svg>
+                                <span class="visually-hidden">Start Capture</span>
+                            </button>
+                            
+                            <button id="finishScanButton" class="secondary-button">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="assets/images/icons.svg#complete"></use>
+                                </svg>
+                                <span>Finish</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results View -->
+            <section class="view" id="resultsView" data-view="results">
+                <div class="results-container">
+                    <div class="results-header">
+                        <h2>Scan Results</h2>
+                        <div class="results-meta">
+                            <div class="meta-item">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="assets/images/icons.svg#points"></use>
+                                </svg>
+                                <span id="resultPointCount">0 points</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="assets/images/icons.svg#area"></use>
+                                </svg>
+                                <span id="resultArea">0 m²</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="assets/images/icons.svg#time"></use>
+                                </svg>
+                                <span id="scanTime">00:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="results-preview" id="resultsPreview">
+                        <!-- 3D results preview will be rendered here -->
+                    </div>
+                    
+                    <div class="results-controls">
+                        <button id="newScanButton" class="secondary-button">
+                            <svg aria-hidden="true">
+                                <use xlink:href="assets/images/icons.svg#new-scan"></use>
+                            </svg>
+                            <span>New Scan</span>
+                        </button>
+                        
+                        <button id="exportButton" class="primary-button">
+                            <svg aria-hidden="true">
+                                <use xlink:href="assets/images/icons.svg#export"></use>
+                            </svg>
+                            <span>Export</span>
+                        </button>
+                        
+                        <div class="tool-controls">
+                            <button class="tool-button" id="measureButton" aria-label="Measure">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="assets/images/icons.svg#measure"></use>
+                                </svg>
+                            </button>
+                            <button class="tool-button" id="colorModeButton" aria-label="Color Mode">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="assets/images/icons.svg#color-mode"></use>
+                                </svg>
+                            </button>
+                            <button class="tool-button" id="fullscreenButton" aria-label="Fullscreen">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="assets/images/icons.svg#fullscreen"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>© 2024 LiDAR 3D Scanner | v1.0.0</p>
+            <p>Use Safari on iPhone 12 Pro+ / iPad Pro 2020+ for best experience</p>
+        </footer>
+    </div>
+
+    <!-- Modal Templates -->
+    <div class="modal-container" id="settingsModal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal" role="dialog" aria-labelledby="settingsTitle">
+            <div class="modal-header">
+                <h2 id="settingsTitle">Settings</h2>
+                <button class="close-button" data-close-modal aria-label="Close">
+                    <svg aria-hidden="true">
+                        <use xlink:href="assets/images/icons.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-content">
+                <form id="settingsForm">
+                    <div class="settings-group">
+                        <h3>Display</h3>
+                        <div class="setting-item">
+                            <label for="themeSetting">Theme</label>
+                            <select id="themeSetting" name="theme">
+                                <option value="auto">System Default</option>
+                                <option value="light">Light</option>
+                                <option value="dark">Dark</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <label for="pointSizeSetting">Point Size</label>
+                            <input type="range" id="pointSizeSetting" name="pointSize" min="1" max="10" value="3">
+                            <output for="pointSizeSetting">3</output>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-group">
+                        <h3>Scanning</h3>
+                        <div class="setting-item">
+                            <label for="defaultModeSetting">Default Mode</label>
+                            <select id="defaultModeSetting" name="defaultMode">
+                                <option value="area">Max Area</option>
+                                <option value="detail">Max Detail</option>
+                            </select>
+                        </div>
+                        <div class="setting-item checkbox">
+                            <input type="checkbox" id="showGuideSetting" name="showGuide" checked>
+                            <label for="showGuideSetting">Show Scanning Guide</label>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-group">
+                        <h3>Export</h3>
+                        <div class="setting-item">
+                            <label for="defaultFormatSetting">Default Format</label>
+                            <select id="defaultFormatSetting" name="defaultFormat">
+                                <option value="ply">PLY</option>
+                                <option value="e57">E57</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="secondary-button" data-close-modal>Cancel</button>
+                <button class="primary-button" id="saveSettingsButton">Save Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-container" id="exportModal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal" role="dialog" aria-labelledby="exportTitle">
+            <div class="modal-header">
+                <h2 id="exportTitle">Export 3D Scan</h2>
+                <button class="close-button" data-close-modal aria-label="Close">
+                    <svg aria-hidden="true">
+                        <use xlink:href="assets/images/icons.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-content">
+                <form id="exportForm">
+                    <div class="form-group">
+                        <label for="exportFilename">Filename</label>
+                        <input type="text" id="exportFilename" name="filename" value="LiDAR_Scan">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Format</label>
+                        <div class="radio-group" role="radiogroup">
+                            <div class="radio-item">
+                                <input type="radio" id="formatPLY" name="format" value="ply" checked>
+                                <label for="formatPLY">PLY (3D Points)</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="formatE57" name="format" value="e57">
+                                <label for="formatE57">E57 (Industry Standard)</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Options</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="includeColor" name="includeColor" checked>
+                                <label for="includeColor">Include Color Data</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="compressData" name="compress" checked>
+                                <label for="compressData">Compress Data</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                
+                <div class="export-progress" hidden>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <p class="progress-status">Preparing export...</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="secondary-button" data-close-modal>Cancel</button>
+                <button class="primary-button" id="startExportButton">Export</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay" aria-hidden="true">
+        <div class="loading-spinner"></div>
+        <p class="loading-message">Processing scan data...</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="src/js/app.js" type="module"></script>
+    <script>
+        // Register service worker for PWA support
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('assets/service-worker.js')
+                    .catch(error => console.error('Service worker registration failed:', error));
+            });
+        }
+    </script>
+</body>
+</html>
